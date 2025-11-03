@@ -1,0 +1,206 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #f9f9f9;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --accent-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.search-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput {
+    width: 70%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#searchInput:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.year-section {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.year-description {
+    text-align: center;
+    margin: 10px 0 20px 0;
+    color: #666;
+    font-style: italic;
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
+}
+
+.year-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.papers-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.paper-card {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    border-left: 4px solid var(--primary-color);
+}
+
+.paper-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.paper-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+
+/* 如果只在标题上添加链接 */
+.paper-title a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.paper-title a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.paper-authors {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.paper-year {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .year-header {
+        left: 20px;
+        transform: none;
+    }
+    
+    .paper-year {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
