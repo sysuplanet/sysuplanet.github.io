@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper List</title>
-    <link rel="stylesheet" href="./css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper List</title>
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <!------------ 网页设置 ------------>
 
@@ -43,7 +43,7 @@ Accelerating Radiative Transfer for Planetary Atmospheres by Orders of Magnitude
 </a>
 <div class="paper-year">2025-11-03</div>
 </div>
-<div class="paper-tag">Machine Learning Model</div>
+<div class="paper-tag">Machine Learning Model (latex example $\alpha^2$)</div>
 </div>
 <!-- 论文1 -->
 
@@ -124,6 +124,21 @@ Streaming Torque in Dust–Gas Coupled Protoplanetary Disks
 <!------------ 脚注 ------------>
 
 </div>
+<!-- MathJax -->
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['$', '$'], ['\\(', '\\)']],
+displayMath: [['$$', '$$'], ['\\[', '\\]']]
+},
+svg: {
+fontCache: 'global'
+}
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 </body>
 <!------------------------ 主体 ------------------------>
 </html>
